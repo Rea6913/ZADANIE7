@@ -8,7 +8,12 @@ namespace PadawansTask7
         {
             if (array == null)
                 throw new ArgumentNullException();
-            if (array.Length == 0)
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == null)
+                    throw new ArgumentNullException();
+            }
+                if (array.Length == 0)
                 throw new ArgumentException();
 
             for (int i = 0; i < array.Length; i++)
